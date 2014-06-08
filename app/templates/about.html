@@ -1,0 +1,32 @@
+{% extends 'layout.html' %}
+{% block main_content %}
+<img src="{{ url_for('static', filename='img/me.jpg') }}" class="img-circle"/>
+<h1>About Me</h1>
+<p>
+    My name is Ian Michael Auld (get it IMA Webdev), I'm 28 years old and have been using Python for about ~1-1.5
+    years. I am a Marine veteran that completed one tour in support of Operation:
+    Iraqi Freedom. I was working primarily as the shipping manager for a small to
+    mid size retail website for the past 4 years. I fulfilled various other roles 
+    while working there which lead me to begin learning programming to help solve 
+    a problem I encountered.
+</p>
+
+<p>
+    I started learning C# initially which can be quite cumbersome at times but one
+    day while shopping in Barnes and Noble with my girlfriend I picked up a Python 
+    book on a whim, remembering this <a href="http://xkcd.com/353/" target="_blank">XKCD comic</a>. 
+    Since then I have made a few apps with Python mostly using Flask (including this website).
+</p>
+
+<p>
+    I have a solid foundation in "vanilla" Python as well as strong understanding 
+    of HTML and CSS as well as a working knowledge of Flask, SQL, Javascript and 
+    jQuery. I am curretnly attending <a href="http://www.codefellows.org/" target="_blank">Code Fellows</a> 
+    in Seattle, WA which I will be completeing at the end of July. You can see my learning journal, 
+    an ongoing project I'll be working on <a href="http://learning-journal.ima-webdev.com" target="_blank">here</a>.
+</p>
+<p>Please feel free to contact me at on of the links on the left or <a href="{{ url_for('contact') }}">here</a>.</p>
+{% endblock %}
+{% block sidebar %}
+{% include 'sidebar.html' %}
+{% endblock %}
