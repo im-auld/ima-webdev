@@ -5,6 +5,11 @@ __pycache__/
 # C extensions
 *.so
 
+# Editor Files
+ima-webdev.sublime-project
+ima-webdev.sublime-workspace
+.idea/
+
 # Distribution / packaging
 .Python
 env/

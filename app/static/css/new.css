@@ -5,36 +5,98 @@
 
 */
 body {
-    background-color: #e3e3e3;
+    background-color: #333;
 }
 
-header {
-    background: #333;
+header{
+    position: relative;
+    top: 0;
+/*    background: radial-gradient(ellipse at top,rgba(255,255,255,.15) 0%,rgba(255,255,255,0) 150%);*/
+    background: linear-gradient(to bottom,rgba(255,255,255,.15) 0%,rgba(255,255,255,0) 150%);
+
+}
+
+header::after {
+  content: " ";
+  background: url('../img/noise.png');
+  opacity: 0.2;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
 }
 
 header h1 {
+    padding: 15px;
+}
+
+header h1 a{
     color: #EDEDED;
     padding: 15px;
+}
+
+header h1 a:hover{
+    color: #EDEDED;
+}
+
+header h1 a:focus{
+    color: #EDEDED;
 }
 
 .content {
     width: 100%;
     height: auto;
-    padding: 30px 12px;
 }
 
-.note {
-    background-color: #ffffff;
-    padding: 10px 0;
-    color: #2B2B2B;
-            box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2);
-       -moz-box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2);
-    -webkit-box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2);
+.middle-4 {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+#main-content, #secondary-content {
+    padding: 30px;
+}
+
+#main-content {
+    background: #fafafa;
+    background: url('../img/python_transparent.png') no-repeat center #fafafa;
+    min-height: 300px;
+}
+
+#secondary-content {
+    background: #e5e5e5;
+    box-shadow: inset 0 3px 2px rgba(0,0,0,.07)
+}
+
+.float-left li {
+    float: left;
+}
+
+p a {
+    color: #C75450;
 }
 
 footer {
     background: #C75450;
+    color: #2B2B2B;
     width: 100%;
     position: relative;
     bottom: 0;
+    height: 150px;
+}
+
+
+footer a {
+    color: #4B4B4B;
+}
+
+.img-circle {
+    border-radius: 50%;
+}
+
+.text-image {
+    float: left;
+    margin-right: 25px;
 }
