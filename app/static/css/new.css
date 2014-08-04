@@ -45,6 +45,22 @@ header h1 a:focus{
     color: #EDEDED;
 }
 
+nav a {
+    color: #EDEDED;
+}
+
+nav ul {
+    background: linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.1));
+    border: 1px solid #ededed;
+    border-radius: 4px;
+    overflow: auto;
+}
+
+nav ul li {
+    float: left;
+    padding: 15px;
+}
+
 .content {
     width: 100%;
     height: auto;
