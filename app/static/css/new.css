@@ -30,6 +30,7 @@ header::after {
 
 header h1 {
     padding: 15px;
+    display: inline;
 }
 
 header h1 a{
@@ -50,15 +51,25 @@ nav a {
 }
 
 nav ul {
-    background: linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.1));
-    border: 1px solid #ededed;
+    background: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.1)) repeat scroll 0% 0% transparent;
     border-radius: 4px;
     overflow: auto;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.6) inset;
+    margin: 5px;
 }
 
 nav ul li {
     float: left;
-    padding: 15px;
+    padding: 5px;
+}
+
+nav ul li:first-child {
+    border-right: 1px solid rgba(0,0,0,.2);
+}
+
+nav ul li:last-child {
+    border-left: 1px solid rgba(255,255,255,.2);
 }
 
 .content {
