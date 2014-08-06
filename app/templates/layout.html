@@ -1,57 +1,66 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE HTML>
+<html>
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title> imawebdev </title>
-    <!-- Bootstrap -->
-    <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
-    <link href="{{ url_for('static', filename='css/dashboard.css') }}" rel="stylesheet">
-    <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
+    <title>IMA Webdev</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/ivory.css')}}" media="all">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/new.css')}}" media="all">
+    <!-- For Date picker only -->
+    <!--<link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" rel="stylesheet" type="text/css"/>-->
+    <!--<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>-->
+    <!--<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>-->
+    <script>
+      $(document).ready(function() {
+        $("#datepicker1").datepicker();
+        $("#datepicker2").datepicker();
+      });
+    </script>
+    <!-- For Date picker only -->
 </head>
 <body>
-    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-        <div class="container-fluid">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="{{ url_for('index') }}">IMA WebDev</a>
-            </div><!-- /navabr-header -->
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav navbar-right">
-                    <li><a href="{{ url_for('index') }}">Home</a></li>
-                    <li><a href="{{ url_for('about') }}">About</a></li>
-                    <li><a href="{{ url_for('contact') }}">Contact</a></li>
+    <header>
+        <div class="row" >
+            <h1><a href="/">ima-webdev</a></h1>
+            <nav class="right">
+                <ul class="no-bullet clearfix">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/about">About</a></li>
+                    <li><a href="/contact">Contact</a></li>
                 </ul>
-            </div><!-- /navbar-collapse -->
-        </div><!-- /container -->
-    </div><!-- /navbar -->
-    <div class="container-fluid">
-        <div class="row">
-            <div id="sidebar" class="col-sm-3 col-md-2 sidebar">
-                {% block sidebar %}
-                {% endblock %}
-            </div><!-- /sidebar -->
-            <div id="main-content" class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-                {% block main_content %}
-                {% endblock %}
-            </div><!-- /main_content -->
+            </nav>
         </div>
-    </div> <!-- /container-fluid -->
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+    </header>
+    <main class="content">
+        <section id="main-content">
+            <div class="g1140">
+                <div class="row">
+                    <div id="main-content-area" class="c12 last">
+                        <div class="row">
+                            {% block main_content %}
+                            {% endblock %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="secondary-content">
+            <div class="g1200">
+                <div class="row">
+                    {% include 'demos.html' %}
+                </div>
+            </div>
+        </section>
+    </main><!-- grid -->
+    <footer>
+        <div class="row">
+            <div class="c6 first">
+                <p>Developed by Ian Auld using the <a href="http://weice.in">Ivory CSS Framework</a> and <a href="http://flask.pocoo.org/">Flask</a></p>
+            </div>
+            <div class="c6 last text-right">
+                <p>Free to use Under License GPLv2<p>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>

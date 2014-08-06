@@ -5,36 +5,140 @@
 
 */
 body {
-    background-color: #e3e3e3;
+    background-color: #333;
 }
 
-header {
-    background: #333;
+header{
+    position: relative;
+    top: 0;
+/*    background: radial-gradient(ellipse at top,rgba(255,255,255,.15) 0%,rgba(255,255,255,0) 150%);*/
+    background: linear-gradient(to bottom,rgba(255,255,255,.15) 0%,rgba(255,255,255,0) 150%);
+
+}
+
+header::after {
+  content: " ";
+  background: url('../img/noise.png');
+  opacity: 0.2;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
 }
 
 header h1 {
+    padding: 15px;
+    display: inline;
+}
+
+header h1 a{
     color: #EDEDED;
     padding: 15px;
+}
+
+header h1 a:hover{
+    color: #EDEDED;
+}
+
+header h1 a:focus{
+    color: #EDEDED;
+}
+
+nav a {
+    color: #EDEDED;
+}
+
+nav a:hover {
+    color: #EDEDED;
+}
+
+nav ul {
+    background: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.1)) repeat scroll 0% 0% transparent;
+    border-radius: 4px;
+    overflow: auto;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.6) inset;
+    margin: 5px 30px;
+}
+
+nav ul li {
+    float: left;
+    padding: 5px 8px;
+}
+
+nav ul li:first-child {
+    border-right: 1px solid rgba(0,0,0,.1);
+}
+
+nav ul li:not(:first-child):not(:last-child) {
+    border-left: 1px solid rgba(255, 255, 255, 0.1);
+    border-right: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+nav ul li:last-child {
+    border-left: 1px solid rgba(255,255,255,.1);
+}
+
+nav ul li:hover {
+    box-shadow: inset 0 0 10px rgba(255,255,255,.3);
+}
+
+nav ul li:active {
+    box-shadow: inset 0 0 10px rgba(255,255,255,.6);
 }
 
 .content {
     width: 100%;
     height: auto;
-    padding: 30px 12px;
 }
 
-.note {
-    background-color: #ffffff;
-    padding: 10px 0;
-    color: #2B2B2B;
-            box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2);
-       -moz-box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2);
-    -webkit-box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2);
+.middle-4 {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+#main-content, #secondary-content {
+    padding: 30px;
+}
+
+#main-content {
+    background: #fafafa;
+    background: url('../img/python_transparent.png') no-repeat center #fafafa;
+    min-height: 300px;
+}
+
+#secondary-content {
+    background: #e5e5e5;
+    box-shadow: inset 0 3px 2px rgba(0,0,0,.07)
+}
+
+.float-left li {
+    float: left;
+}
+
+p a {
+    color: #C75450;
 }
 
 footer {
     background: #C75450;
+    color: #2B2B2B;
     width: 100%;
     position: relative;
     bottom: 0;
+}
+
+footer a {
+    color: #4B4B4B;
+}
+
+.img-circle {
+    border-radius: 50%;
+}
+
+.text-image {
+    float: left;
+    margin-right: 25px;
 }

@@ -1,0 +1,43 @@
+<div class="c4 first demo">
+    <figure>
+        <img style="width:100%;" src="{{ url_for('static', filename='img/datamappr.png') }}">
+    </figure>
+    <h3><a href="http://datamappr.herokuapp.com" target="_blank">Datamapper</a></h3>
+    <p>
+        Datamapper is a Flask application that uses economic data collected by
+        the federal government to generate heat maps. You can then view the changes
+        in that data by adjusting the slider. Not all data sets are complete and
+        there isn't always data for every state. The front uses jQuery/JS, a
+        library called <a href="http://www.patrick-wied.at/static/heatmapjs/">heatmap.js</a>
+        for the heat maps as well as the Bootstrap CSS framework.
+    </p>
+</div>
+<div class="c4 middle-4 demo">
+    <figure>
+        <img style="width:100%;" src="{{ url_for('static', filename='img/inventory.png') }}">
+    </figure>
+    <h3><a href="http://glacial-spire-3650.herokuapp.com/" target="_blank">Flask Inventory</a></h3>
+    <p class="text-center">
+        Flask Inventory is a lightweight inventory management system suited best
+        for small inventories of non-serialized items of a trivial cost. It is
+        simple to use and has very low overhead. This project was a proof of concept for
+        me, that Flask could be used to create more extensive projects than simple
+        one page apps. This is (and probably always will be ) a work in progress.
+    </p>
+</div>
+<div class="c4 last demo">
+    <figure>
+        <img style="width:100%;" src="{{ url_for('static', filename='img/tweettrack.png') }}">
+    </figure>
+    <h3 class="text-center">
+        <a href="http://ec2-54-191-111-81.us-west-2.compute.amazonaws.com" target="_blank">tweetTrack</a>
+    </h3>
+    <p class="text-center">
+        tweetTrack is Flask application that uses a users tweet history to try
+        and predict their location. This application was inspired by a research
+        paper written by <a href="http://arxiv.org/ftp/arxiv/papers/1403/1403.2345.pdf">IBM</a>. By analyzing the twitter histories of
+        users from the 100 most populace cities in the US a statistical model was built.
+        This model helped to predict where a user was (or at least where they
+        tweet about).
+    </p>
+</div>

@@ -108,11 +108,7 @@ hr { border: solid #ddd; border-width: 1px 0 0; clear: both; margin: 20px 0 20px
 
 /* ---- Lists ---- */
 ul, ol, dl { 
-	font: normal 14px/24px "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif; 
-	margin-bottom: 8px; 
-	list-style-position: inside; 
-	text-indent: 5px; 
-	color: #333333; 
+	font: normal 14px/24px "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
 }
 ul li ul, ul li ol { margin-left: 15px; margin-bottom: 0; }
 ul.square {list-style-type: square;}
