@@ -9,6 +9,7 @@ __pycache__/
 ima-webdev.sublime-project
 ima-webdev.sublime-workspace
 .idea/
+run.py
 
 # Distribution / packaging
 .Python
