@@ -2,7 +2,7 @@ import os
 
 
 CSRF_ENABLED = True
-SECRET_KEY = os.urandom(32)
+SECRET_KEY = os.urandom(64)
 
 MAIL_SERVER = "smtp.gmail.com"
 MAIL_PORT = 465
