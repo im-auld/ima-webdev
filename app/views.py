@@ -1,6 +1,6 @@
 from app import app, mail
 from flask import render_template, redirect, url_for
-from flask.ext.mail import Message
+from flask_mail import Message
 from forms import ContactForm
 
 
@@ -36,6 +36,4 @@ def contact():
         )
         mail.send(msg)
         return redirect(url_for('contact'))
-    else:
-        print u'Something went wrong'
     return render_template('contact.html', form=form)
